@@ -955,6 +955,7 @@
       <a name="width" val="7"/>
     </comp>
     <comp lib="0" loc="(210,750)" name="Constant">
+      <a name="value" val="0x2"/>
       <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(220,1590)" name="Tunnel">
@@ -1087,19 +1088,20 @@
       <a name="label" val="rst"/>
     </comp>
     <comp lib="0" loc="(300,760)" name="Constant">
+      <a name="value" val="0x2"/>
       <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(330,1340)" name="Tunnel">
       <a name="label" val="PC_add_4"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(330,860)" name="Tunnel">
-      <a name="label" val="inst_address"/>
-      <a name="width" val="32"/>
-    </comp>
     <comp lib="0" loc="(340,1790)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="s_ra"/>
+    </comp>
+    <comp lib="0" loc="(350,830)" name="Tunnel">
+      <a name="label" val="inst_address"/>
+      <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(360,1930)" name="Tunnel">
       <a name="label" val="U"/>
@@ -2475,11 +2477,9 @@
     <wire from="(300,760)" to="(310,760)"/>
     <wire from="(310,1620)" to="(310,1710)"/>
     <wire from="(310,1620)" to="(530,1620)"/>
-    <wire from="(310,830)" to="(320,830)"/>
+    <wire from="(310,830)" to="(350,830)"/>
     <wire from="(320,1630)" to="(320,1740)"/>
     <wire from="(320,1630)" to="(530,1630)"/>
-    <wire from="(320,830)" to="(320,860)"/>
-    <wire from="(320,860)" to="(330,860)"/>
     <wire from="(330,1640)" to="(330,1780)"/>
     <wire from="(330,1640)" to="(530,1640)"/>
     <wire from="(340,1780)" to="(340,1790)"/>
