@@ -1286,7 +1286,6 @@
       <a name="width" val="7"/>
     </comp>
     <comp lib="0" loc="(210,750)" name="Constant">
-      <a name="value" val="0x2"/>
       <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(2140,1070)" name="Tunnel">
@@ -1436,6 +1435,36 @@
       <a name="label" val="Byte_4"/>
       <a name="width" val="8"/>
     </comp>
+    <comp lib="0" loc="(2570,1490)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Byte_1"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(2570,1520)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Byte_2"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(2600,1510)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="bit1" val="0"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="1"/>
+      <a name="bit13" val="1"/>
+      <a name="bit14" val="1"/>
+      <a name="bit15" val="1"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="facing" val="west"/>
+      <a name="incoming" val="16"/>
+    </comp>
     <comp lib="0" loc="(2640,1350)" name="Splitter">
       <a name="appear" val="center"/>
       <a name="bit1" val="0"/>
@@ -1473,9 +1502,12 @@
       <a name="fanout" val="4"/>
       <a name="incoming" val="32"/>
     </comp>
-    <comp lib="0" loc="(2680,1350)" name="Tunnel">
-      <a name="label" val="mem_out"/>
-      <a name="width" val="32"/>
+    <comp lib="0" loc="(2640,1510)" name="Bit Extender">
+      <a name="in_width" val="16"/>
+      <a name="out_width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(2680,1390)" name="Tunnel">
+      <a name="label" val="lh"/>
     </comp>
     <comp lib="0" loc="(270,670)" name="Constant">
       <a name="value" val="0x4"/>
@@ -1484,6 +1516,10 @@
     <comp lib="0" loc="(270,690)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="inst_address"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(2720,1360)" name="Tunnel">
+      <a name="label" val="mem_out"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(280,1300)" name="Tunnel">
@@ -1496,7 +1532,6 @@
       <a name="label" val="rst"/>
     </comp>
     <comp lib="0" loc="(300,760)" name="Constant">
-      <a name="value" val="0x2"/>
       <a name="width" val="5"/>
     </comp>
     <comp lib="0" loc="(330,1340)" name="Tunnel">
@@ -2222,6 +2257,9 @@
     <comp lib="2" loc="(230,1070)" name="Priority Encoder">
       <a name="select" val="2"/>
     </comp>
+    <comp lib="2" loc="(2690,1360)" name="Multiplexer">
+      <a name="width" val="32"/>
+    </comp>
     <comp lib="2" loc="(290,1400)" name="Multiplexer">
       <a name="facing" val="south"/>
       <a name="select" val="2"/>
@@ -2938,13 +2976,23 @@
     <wire from="(2570,1340)" to="(2620,1340)"/>
     <wire from="(2570,1370)" to="(2610,1370)"/>
     <wire from="(2570,1400)" to="(2620,1400)"/>
+    <wire from="(2570,1490)" to="(2570,1500)"/>
+    <wire from="(2570,1500)" to="(2580,1500)"/>
+    <wire from="(2570,1510)" to="(2570,1520)"/>
+    <wire from="(2570,1510)" to="(2580,1510)"/>
     <wire from="(260,1640)" to="(260,1650)"/>
     <wire from="(260,1790)" to="(260,1800)"/>
     <wire from="(2610,1350)" to="(2610,1370)"/>
     <wire from="(2610,1350)" to="(2620,1350)"/>
     <wire from="(2620,1310)" to="(2620,1330)"/>
     <wire from="(2620,1360)" to="(2620,1400)"/>
-    <wire from="(2640,1350)" to="(2680,1350)"/>
+    <wire from="(2640,1350)" to="(2660,1350)"/>
+    <wire from="(2640,1510)" to="(2650,1510)"/>
+    <wire from="(2650,1370)" to="(2650,1510)"/>
+    <wire from="(2650,1370)" to="(2660,1370)"/>
+    <wire from="(2670,1380)" to="(2670,1390)"/>
+    <wire from="(2670,1390)" to="(2680,1390)"/>
+    <wire from="(2690,1360)" to="(2720,1360)"/>
     <wire from="(270,1340)" to="(270,1360)"/>
     <wire from="(270,1380)" to="(270,1390)"/>
     <wire from="(270,670)" to="(300,670)"/>
